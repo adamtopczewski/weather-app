@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <input class="form__input form__input--theme" id="cityInput" type="text" name="city"
+            placeholder="Enter city name" autocomplete="off">
+        <p class="form__error" id="error">Provided city is invalid</p>
+    </header>
+    <div class="container">
+        <section class="weatherdisplay">
+            <div class="weather">
+                <h2 id="city" class="weather__city">--</h2>
+                <p class="weather__coords">
+                    <span id="long" class="weather__coords__span"></span>
+                    <span id="lat" class="weather__coords__span"></span>
+                </p>
+                <div class="weather__temperature">
+                    <span id="temp" class="weather__temperature__current"></span>
+                    <canvas id="icon" class="weather__icon" width="100" height="100"></canvas>
+                </div>
+                <p id="desc" class="weather__description">Sunny</p>
+            </div>
+        </section>
+        <section class="map">
+            <p class="map__help">Choose a place on a map below to check it's temperature:</p>
+            <div class="map__display" id="map"></div>
+        </section>
+    </div>
+    </div>
+    <script src="skycons.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

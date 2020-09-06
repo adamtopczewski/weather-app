@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo|Sulphur+Point&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #FF973B 0%, #6249B3 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/* Custom Scroll */
+
+::-webkit-scrollbar{
+	width: 8px;	
+}
+
+::-webkit-scrollbar-track{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 15px;
+	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: rgb(54, 54, 54);
+}
+
+/*containers*/
+
+.header {    
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    height : 10vh;
+    box-shadow: 1px 5px 10px -5px rgba(255, 255, 255, 0.5);
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+}
+
+.weatherdisplay {
+    color: white;
+    height: 75vh;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map__display {
+    height: 75vh;
+    width: 45vw;
+}
+
+.weather {
+    text-align: center;
+}
+
+/* form */
+
+.form__input {
+    display: inline-block;
+    width: 35vw;
+    height: 4vh;
+    padding: 5px 10px;
+    font-size: 1em;
+    margin: auto;
+    text-align: center;
+    border: none;
+    outline: none;
+    box-shadow: 1px 5px 10px -5px rgba(0, 0, 0, 0.5);
+}
+
+.form__input--theme {
+    background-color: #FFFFFF;
+}
+
+.form__error {
+    font-family: 'Helvetica', Arial, Lucida Grande, sans-serif;
+    font-size: 0.8em;
+    position: absolute;
+    padding: 2px;
+    top: 8vh;
+    color: #000000;
+    background-color: #FFFFFF;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    width: 33vw;
+    max-width: 200px;
+    border: 2px solid black;
+    border-radius: 10%;
+    display: none;
+}
+
+/* Text */
+
+.weather__city {
+    text-transform: uppercase;
+    align-items: center;
+    text-align: center;
+    font-size: 4em;
+    font-family: 'Baloo', cursive;
+}
+
+.weather__coords {
+    position: relative;
+    font-family: 'Sulphur Point', sans-serif;
+    font-size: 2.5em;
+    top: -0.4em;
+}
+
+.weather__temperature__current {
+    display: inline-block;
+    font-family: 'Baloo', cursive;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5em;
+    padding: 80px;
+}
+
+.weather__description {
+    font-family: 'Sulphur Point', sans-serif;
+    font-size: 3.3em;
+}
+.weather__icon {
+    height: 12%;
+    margin: auto;
+    position: relative;
+    bottom: 30px;
+    right: 30px;
+}
+
+.map__help {
+    font-family: 'Sulphur Point', sans-serif;
+    color: #FFFFFF;
+    font-size: 1em;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Tablets - change'd flex-dir, height, width and margins */
+
+@media only screen and (max-width: 992px) {
+    .container{
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+    .weatherdisplay {
+        color: white;
+        height: 75vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .map{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .map__display {
+        margin-top: 10px;
+        height: 85vh;
+        width: 90vw;
+        margin: auto;
+    }
+}
+
+/* At phonescreens adjusting font-sizes */
+
+@media only screen and (max-width: 600px) {
+    .container{
+        margin-top: 20px;
+    }
+
+    .weatherdisplay {
+        height: auto;
+        padding: 10px;
+    }
+    .weather__city {
+        font-size: 3em;
+    }
+    
+    .weather__coords {
+        position: relative;
+        font-size: 2em;
+    }    
+    
+    .weather__temperature__current {
+        font-size: 3em;
+        padding: 30px;
+    }
+
+    
+    .weather__description {
+        margin-top:0;
+        font-size: 2em;
+    }
+    
+    .map__help {
+        font-size: 1em;
+    }
+
+    .weather__icon {
+        position: initial;
+    }
+
+    .form__input {
+        font-size: 0.8em;
+    }    
+}
